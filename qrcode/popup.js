@@ -15,12 +15,17 @@ window.addEventListener("load", function() {
 });
 var initQrcode = function(url) {
 	var pre = {
+		'web': url,
 		'map': 'baidumap://map/cost_share?url=' + url,
 		'lbc': 'baidumap://map/component?comName=lbc&target=webshell_login_page&param=' +
 		encodeURIComponent(JSON.stringify({'url':url})),
 		'nuo': 'bainuo://component?url=' + encodeURIComponent(url),
 		'nuoweb': 'bainuo://web?url=' + encodeURIComponent(url)
 	};
+	// 正常浏览器url
+	jQuery('#qrcodeWeb').qrcode({
+		text: pre.web
+	});
 
 	// 百度地图url 
 	jQuery('#qrcodeMap').qrcode({
