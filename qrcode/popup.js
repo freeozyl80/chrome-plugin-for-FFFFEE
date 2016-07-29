@@ -39,11 +39,11 @@ var initQrcode = function(url) {
 
 	// 百度糯米浏览器组件版本
 	jQuery('#qrcodeNuo').qrcode({
-		text: pre.lbc
+		text: pre.nuo
 	});	
 
 	// 百度糯米浏览器web版本 
 	jQuery('#qrcodeNuoWeb').qrcode({
-		text: pre.lbc
+		text: pre.nuoweb
 	});	
 }
